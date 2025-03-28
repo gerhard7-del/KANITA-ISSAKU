@@ -1,0 +1,75 @@
+@REM<!DOCTYPE html>
+<html>
+    <head>
+        <title>SolarSystem</title>
+        <script src="./script/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <!-- Sun -->
+            <a-sphere color="orange" src="./texture/2k_sun.jpg" position="2 2 -15"
+                      radius="4" >
+            </a-sphere>
+            
+                             <!-- Planets & Their Orbits -->
+            <!-- Mercury -->
+            <a-torus radius="6" radius-tubular="0.01" segment-radial="8" color="white" position="2 2 -16" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 30000"  rotation="0 0 0">
+            <a-sphere color="yellow" position="3 5 0.47" radius="0.5" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 10000" src="./texture/2k_mercury.jpg" >          
+            </a-sphere>
+            </a-torus>
+            
+            <!-- Venus -->
+             <a-torus radius="8.6" radius-tubular="0.01" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 30000" color="white" position="2 2 -16" color="black"  rotation="0 0 0">
+                 <a-sphere color="white" position="-6 6 0.77" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 30000"
+                      radius="0.8" position="-10 2 0.3" src="./texture/2k_venus_surface.jpg"></a-sphere>
+            </a-torus>
+            
+            <!-- Earth -->
+            <a-torus radius="10" radius-tubular="0.01" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 40000" color="white" position="2 2 -16" rotation="0 0 0">
+            <a-sphere color="lightblue" position="-1.784 9.710 0.85" animation="property: rotation; to:0 0 0; loop:true; easing: linear; dur: 5000" src="./texture/2k_earth_daymap.jpg" radius="0.9">
+                <a-torus radius="1.3" radius-tubular="0.003" color="white" position="-0.2 0 -0.3" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 5000"  position="-2 0 1">
+                        <a-sphere color="#fff" position="-0.2 1.4 0.15" radius="0.2" src="./texture/2k_moon.jpg"></a-sphere>
+                </a-torus>
+            </a-sphere>
+            </a-torus> 
+            
+            <!-- Mars -->
+             <a-torus radius="12.5" radius-tubular="0.01" color="white" position="2 2 -16" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 50000" >
+                  <a-sphere color="#fff" position="0.27 11.981 0.4" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 30000"radius="0.6" src="./texture/2k_mars.jpg"></a-sphere>
+            </a-torus>
+            
+            <!-- Jupiter -->
+          <a-torus radius="16" radius-tubular="0.01" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 50000"  color="white" position="2 2 -16" rotation="0 0 0">
+              <a-sphere color="#fff" position="-9.292 11.771 1.54" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 30000" radius="1.6" src="./texture/2k_jupiter.jpg">
+            <a-torus color="#fff" radius="1.8" radius-tubular="0.15" position="0.079 0.028 0.270" rotation="150 0 0"
+                             src="./texture/2k_jupiter.jpg"></a-torus>  </a-sphere>              
+            </a-torus>
+            
+            <!-- Saturn -->
+             <a-torus radius="18.3" radius-tubular="0.01" color="white" position="2 2 -16" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 60000" rotation="0 0 0">
+                 <a-sphere color="#fff" position="-16.71 -5.259 0.54" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 30000" radius="0.8" src="./texture/2k_saturn.jpg"></a-sphere>
+            </a-torus>
+            
+            <!-- Uranus -->
+             <a-torus radius="22" radius-tubular="0.01" color="white" position="2 2 -16" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 70000" rotation="0 0 0">
+                 <a-sphere color="lightblue" position="-20.2 6 0.3" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 30000"radius="1" src="./texture/2k_uranus.jpg"></a-sphere>
+            </a-torus>
+            
+            <!-- Neptune -->
+             <a-torus radius="25" radius-tubular="0.01" color="white" position="2 2 -16" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 80000" rotation="0 0 0">
+             <a-sphere color="lightblue" position="-12 -21.62 0.7" src="./texture/2k_neptune.jpg"
+            animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 30000" radius="0.9"></a-sphere>
+            </a-torus>
+            
+            <!-- Pluto -->
+            <a-torus radius="30" radius-tubular="0.01" segment-radial="2" color="white" position="2 2 -16" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 100000" rotation="0 0 0">
+                <a-sphere color="white" position="-29.6 3 0.3" radius="0.3" animation="property: rotation; to:0 0 360; loop:true; easing: linear; dur: 30000" src="./texture/2k_saturn_ring_alpha.png"></a-sphere>
+            </a-torus>
+            
+            <a-sky color="#fff" src=""material=" src:texture/2k_stars.jpg; normal-map:#stars-nrm;  repeat:1 1 1; normal-map-repeat:1 1 1;" ></a-sky>
+            
+            <!-- Camera -->
+            <a-camera position="5 2 18"></a-camera>
+        </a-scene>
+    </body>
+</html>
